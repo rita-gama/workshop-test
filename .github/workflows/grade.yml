@@ -1,0 +1,9 @@
+name: grade
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: pip install pytest
+      - run: pytest
